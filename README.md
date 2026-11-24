@@ -1,8 +1,10 @@
-> This is a fork of _LibreQuake_ that adds `lq-zig`, a Zig conversion of the original QuakeC source code, which can still be found at `qcsrc`.
+> This is a fork of _LibreQuake_ that adds `lq-zig`, a Zig conversion of the original QuakeC source code.
 >
 > By default, the `build.py` script will compile the QuakeC source code, but if you do `./build.py --zig` (or `./build.py -p --zig`, which only compiles the `progs.dat`) then it will compile the Zig version of the code.
 >
 > This was made to test [`zig-qc`](https://github.com/eira-fransham/zig-qc), a project to compile Zig code to QuakeC.
+>
+> So far, from my testing, the behaviour of the original QuakeC and the Zig translation is identical.
 
 <p align="center"><a href="https://github.com/lavenderdotpet/LibreQuake">
   <img src="docs/branding/header.png" alt="libre quake header logo" width="75%" />
