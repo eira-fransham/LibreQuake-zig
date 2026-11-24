@@ -9,6 +9,8 @@ working/
 releases/
 venv/
 __pycache__/
+.zig-cache/
+zig-out/
 
 #↓ignored files↓
 docs/lqlogos/logomockup-wip2.ora
@@ -50,6 +52,8 @@ lq-pl.xcf
 *.id1.*
 *.ignore.*
 *.hide.*
+*.content.json
+.DS_Store
 
 #↓custom folders ignores↓
 *-id1-
