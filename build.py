@@ -187,6 +187,9 @@ def compile_progs(use_zig: bool = False):
                 stderr=subprocess.STDOUT,
                 cwd="lq-zig",
             ).wait()
+
+            if zig_qc_ret != 0:
+                raise subprocess.CalledProcessError(zig_qc_ret, zig_build_cmd)
         else:
             print("Compiling progs.dat from qcsrc...")
             subprocess.run(
@@ -195,9 +198,6 @@ def compile_progs(use_zig: bool = False):
                 stderr=subprocess.STDOUT,
                 check=True,  # Fail on non-zero exit code
             )
-
-        if zig_qc_ret != 0:
-            raise subprocess.CalledProcessError(zig_qc_ret, zig_build_cmd)
 
         print("Compiling qwprogs.dat...")
         subprocess.run(
